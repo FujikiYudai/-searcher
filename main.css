@@ -1,0 +1,22 @@
+body{
+    background-image: url("01_2.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0px;
+    background-color:	#23CD9F;
+    color : 	#DEFEE5;
+}
+p{
+    text-align: center;
+    position:relative;
+    top: 700px;
+    font-size: 14px;
+}
+button{
+    /*中央に配置*/
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
