@@ -10,26 +10,6 @@ var tracks={}
 // 楽曲と特徴量の辞書
 var tracksFeatures={}
 
-// 読み込み時、.envからclientIDとclientSecretを取得
-window.onload = function() {
-  console.log("読み込み完了");
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'env.json');
-  xhr.onload = function() {
-    if (xhr.status === 200) {
-      var obj=JSON.parse(xhr.responseText);
-      console.log(obj);
-      clientID.value=obj.CLIENT_ID;
-      clientSecret.value=obj.CLIENT_SECRET;
-    }
-    else {
-      console.log(xhr.responseText);
-    }
-  };
-  xhr.send();
-};
-
-
 // 一時トークン
 var token = document.getElementById("accessToken").value;
 //  検索ボタンが押されたとき、検索結果の表示
