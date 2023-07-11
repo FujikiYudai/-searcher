@@ -5,8 +5,31 @@
     <title>音楽情報searcher</title>
 </head>
 <body>
-    <p>This is my first HTML.</p>
-    <button id="btn">CLICK</button>
+    <h1>音楽情報searcher</h1>
+    <p>アーティストの全楽曲のキー、テンポ、調などをspotify APIを用いて取得します。</p>
+    <p>データは正確でない場合があります(恐らくAIで分析されたデータです)。</p>
+    <p>spotify APIのアクセストークンとアーティスト名を入力し、検索してください。</p>
+
+    <input id="accessToken" type="text"  placeholder="アクセストークン">
+    <input id="artistName" type="text" placeholder="アーティスト名">
+    <button id="btn">検索</button>
+
+
+
+    <ul>
+        <li>spotify APIのアクセストークンの取得は次のサイトを参考にしてください<a href=https://developer.spotify.com/documentation/web-api/tutorials/getting-started>https://developer.spotify.com/documentation/web-api/tutorials/getting-started</a></li>
+        <li>
+            <p>アクセストークンのhttpリクエストはここからも行えます。</p>
+            <input id="clientID" type="text" placeholder="client ID">
+            <input id="clientSecret" type="text" placeholder="client Secret">
+            <button id="getTokenBtn">アクセストークン取得</button>
+        </li>
+        <li>入力されたトークン等の情報はspotify以外へ送信されることは一切ありません</li>
+    </ul>
+    <p id ="status"></p>
     <script src="main.js"></script>
+    <object data=".env">
+
+
 </body>
 </html>
